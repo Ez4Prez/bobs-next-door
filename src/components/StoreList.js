@@ -1,10 +1,15 @@
-import React from "react"
+import React, {useEffect} from "react"
 import Store from "./Store"
 
-function StoreList() {
+function StoreList({ allStores }) {
+ useEffect(() => {
+   
+ console.log("allStores", allStores)
+   
+ }, [])
+ 
 
-
-    return(
+    return (
         <table>
             <tbody>
                 <tr>
@@ -21,9 +26,19 @@ function StoreList() {
                         Episode
                     </th>
                 </tr>
-                {/** Render a list of <Store> components here. */}
+                {/** Render a list of <Store> components here. */
+                    allStores.map((Store) => {
+                        return (
+                            <>
+                                <Store store={Store} />
+                            </>
+                        )
+                    })
+                }
+
+
             </tbody>
-        
+
         </table>
     );
 }

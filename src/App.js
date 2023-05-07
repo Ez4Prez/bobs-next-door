@@ -9,8 +9,8 @@ function App() {
       <img src="/images/bobsburgers.png" />
       <h1>Neighbor Stores</h1>
       <Search />
-      <NewStoreForm />
-      <StoreList />
+      {/* <NewStoreForm />
+      <StoreList /> */}
     </div>
   );
 }
